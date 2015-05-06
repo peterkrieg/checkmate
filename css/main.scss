@@ -74,6 +74,13 @@ h6 {
 	background: orange
 }
 
+// basic styles for each section
+section{
+	height: 100%;
+	padding-top: 200px;
+	text-align: center;
+}
+
 
 
 
@@ -129,18 +136,21 @@ section#intro {
 		font-size: 40px;
 		color: $light;
 		background: transparent;
-		-webkit-transition: background .3s ease-in-out;
-		-moz-transition: background .3s ease-in-out;
-		transition: background .3s ease-in-out;
+		-webkit-transition: .3s ease;
+		-moz-transition: .3s ease;
+		transition: .3s ease;
 		i{
 			transition: .3s ease;
 		}
 		&:hover {
 			outline: none;
 			color: $gold;
+			border-color: $gold;
+			transition: .7s ease;
 			i{
 				transform: translateY(2px);
-				transition: .7s ease;
+				color: $gold;
+				transition: .5s ease;
 			}
 		}
 	}
@@ -149,8 +159,6 @@ section#intro {
 
 
 section#about{
-	height: 100%;
-	padding-top: 200px;
 	div.container{
 		background: red;
 	}
@@ -162,38 +170,35 @@ section#about{
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-section.test{
-	height: 100%;
-	background: lightblue;
-	div.container{
+section#faq{
+	background: steelblue;
+	.container{
 		background: red;
-		border: 5px solid black;
-		p{
-			color: red;
-			background: yellow;
-			height: 100%;
-		}
-		div.col-md-8{
-			color: blue;
-		}
 	}
 }
+
+section#team{
+	background: tomato;
+}
+
+section#careers{
+	background: darkgreen;
+}
+
+section#contact{
+	background: purple;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
