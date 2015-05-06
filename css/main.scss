@@ -80,17 +80,45 @@ section.intro {
 	-webkit-transition: background .3s ease-in-out;
 	-moz-transition: background .3s ease-in-out;
 	transition: background .3s ease-in-out;
-	&:hover,
-	&:focus {
+	i{
+		transition: .3s ease;
+	}
+	&:hover {
 		outline: none;
-		color: red;
-		background: fade($light, 90%);
+		color: orange;
+		i{
+			transform: translateY(3px);
+			transition: .7s ease;
+			&:focus{
+				color: $light;
+			}
+		}
 	}
 }
 
 
+.container-fluid .container{
+	padding-left: 0;
+	padding-right: 0;
+}
 
 
+section.test{
+	height: 100%;
+	background: lightblue;
+	div.container{
+		background: red;
+		border: 5px solid black;
+		p{
+			color: red;
+			background: yellow;
+			height: 100%;
+		}
+		div.col-md-8{
+			color: blue;
+		}
+	}
+}
 
 
 
