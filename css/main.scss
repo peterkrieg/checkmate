@@ -1,17 +1,19 @@
+// ------------------------Importing-----------------------------
 @import "bootstrap";
 
 
-// Variables
+// ------------------------Variables-----------------------------
 
 $dark: #000;
 $light: #fff;
-
-
+$gold: #FFE16A;
 
 $phone: "(min-width: 481px)";
 $tablet: "(min-width: 768px)";
 $desktop: "(min-width: 992px)";
 $largedesktop: "(min-width: 1200px)";
+
+// ------------------------Mixins-----------------------------
 
 @mixin phone {
 	@media #{$phone} {
@@ -37,16 +39,7 @@ $largedesktop: "(min-width: 1200px)";
 	}
 }
 
-
-// Got from blog, not sure if it works well
-@mixin vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
+// ------------------------General Rules-----------------------------
 
 html {
 	width: 100%;
@@ -59,9 +52,7 @@ body {
 	font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
 	color: $light;
 	background-color: $dark;
-	text-align: center;
 }
-
 
 h1,
 h2,
@@ -76,10 +67,11 @@ h6 {
 	letter-spacing: 1px;
 }
 
-// Fixes issue with nested bootstrap containers
-.container-fluid .container{
-	padding-left: 0;
-	padding-right: 0;
+// Created custom container to simulate bootstrap container-fluid, 
+// without nesting problems
+.my-container{
+	width: 100%;
+	background: orange
 }
 
 
@@ -87,36 +79,11 @@ h6 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-h1{
-	font-size: 50px;
-	@include tablet {
-		font-size: 75px;
-	}
-	@include desktop{
-		font-size: 100px;
-	}
-
-
-
-}
-
-section.intro {
+section#intro {
 	width: 100%;
 	height: 100%;
 	color: $light;
+	text-align: center;
 	background: url(../img/background.jpg) no-repeat bottom center scroll;
 	background-color: $dark;
 	-webkit-background-size: cover;
@@ -131,45 +98,81 @@ section.intro {
 			vertical-align: middle;
 		}
 	}
+	h1{
+		font-size: 50px;
+		@include tablet {
+			font-size: 75px;
+		}
+		@include desktop{
+			font-size: 100px;
+		}
+	}
 	.intro-text{
-		font-size: 15px;
+		font-size: 18px;
 		@include tablet{
 			font-size: 25px;
 		}
 	}
-}
-
-
-
-
-.btn-circle {
-	width: 70px;
-	height: 70px;
-	margin-top: 15px;
-	padding: 7px 16px;
-	border: 2px solid $light;
-	border-radius: 35px;
-	font-size: 40px;
-	color: $light;
-	background: transparent;
-	-webkit-transition: background .3s ease-in-out;
-	-moz-transition: background .3s ease-in-out;
-	transition: background .3s ease-in-out;
-	i{
-		transition: .3s ease;
+	.learn-more{
+		margin-top: 30px;
+		font-size: 14px;
+		@include tablet{
+			font-size: 18px;
+		}
 	}
-	&:hover {
-		outline: none;
-		color: orange;
+	.btn-circle {
+		width: 70px;
+		height: 70px;
+		padding: 7px 16px;
+		border: 2px solid $light;
+		border-radius: 35px;
+		font-size: 40px;
+		color: $light;
+		background: transparent;
+		-webkit-transition: background .3s ease-in-out;
+		-moz-transition: background .3s ease-in-out;
+		transition: background .3s ease-in-out;
 		i{
-			transform: translateY(2px);
-			transition: .7s ease;
-			&:focus{
-				color: $light;
+			transition: .3s ease;
+		}
+		&:hover {
+			outline: none;
+			color: $gold;
+			i{
+				transform: translateY(2px);
+				transition: .7s ease;
 			}
 		}
 	}
 }
+
+
+
+section#about{
+	height: 100%;
+	padding-top: 200px;
+	div.container{
+		background: red;
+	}
+	div.row{
+		background: green;
+	}
+	div.col-lg-8{
+		background: orange;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
