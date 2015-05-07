@@ -2,15 +2,18 @@ $(function(){
 
 
 
+
+
+
 	// Fades in document upon loading
 	$('body').hide().fadeIn(2500);
 
 	// jQuery to collapse the navbar on scroll
 	$(window).scroll(function() {
 		if ($(".navbar").offset().top > 200) {
-			$(".navbar-fixed-top").addClass("top-nav-collapse");
+			$(".navbar-fixed-top").addClass("top-nav-appear");
 		} else {
-			$(".navbar-fixed-top").removeClass("top-nav-collapse");
+			$(".navbar-fixed-top").removeClass("top-nav-appear");
 		}
 	});
 

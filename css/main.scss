@@ -83,6 +83,64 @@ section{
 
 
 
+// --------------------Specific Styles, not generic--------------------------
+
+// ------------------------Navbar-----------------------------
+
+nav.navbar-fixed-top{
+	opacity: 0;
+	position: fixed;
+	top: -50px;
+	transition: .5s ease;
+}
+
+nav.top-nav-appear{
+	opacity: .95;
+	position: fixed;
+	top: 0px;
+	transition: 1s ease;
+}
+
+
+
+
+
+
+
+nav.navbar{
+	@include tablet{
+		height: 60px;
+	}
+	div#navbar{
+		// Only floats navbar if tablet or bigger, so the mobile menu isn't messed up
+		@include tablet{
+			float: right;
+		}
+		ul.navbar-nav{
+			li{
+				a{
+					@include tablet{
+						font-size: 18px;
+						height: 60px;
+						padding-top: 20px;
+					}
+					@include transition(.3s ease);
+					&:hover{
+						color: $gold;
+						@include transition(.6s ease);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
 
 
 
@@ -136,9 +194,7 @@ section#intro {
 		font-size: 40px;
 		color: $light;
 		background: transparent;
-		-webkit-transition: .3s ease;
-		-moz-transition: .3s ease;
-		transition: .3s ease;
+		@include transition(.3s ease);
 		i{
 			transition: .3s ease;
 		}
@@ -146,11 +202,11 @@ section#intro {
 			outline: none;
 			color: $gold;
 			border-color: $gold;
-			transition: .7s ease;
+			@include transition(.7s ease);
 			i{
 				transform: translateY(2px);
 				color: $gold;
-				transition: .5s ease;
+				@include transition(.5s ease);
 			}
 		}
 	}
