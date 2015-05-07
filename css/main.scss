@@ -7,6 +7,7 @@
 $dark: #000;
 $light: #fff;
 $gold: #FFE16A;
+$grey: #9d9d9d;
 
 $lora: ""Lora","Helvetica Neue",Helvetica,Arial,sans-serif";
 $montserrat: ""Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif";
@@ -91,6 +92,9 @@ section{
 			color: $gold;
 		}
 	}
+	h2{
+		color: $gold;
+	}
 }
 
 
@@ -107,7 +111,7 @@ nav.navbar-fixed-top{
 }
 
 nav.top-nav-appear{
-	opacity: .93;
+	opacity: .92;
 	position: fixed;
 	top: 0px;
 	@include transition(1s ease);
@@ -123,6 +127,7 @@ nav.navbar{
 	font-family: $montserrat;
 	text-transform: uppercase;
 	background: $dark;
+	border-bottom: 1px solid $grey;
 	@include tablet{
 		height: 60px;
 	}
@@ -139,8 +144,17 @@ nav.navbar{
 		@include tablet{
 			float: right;
 		}
-		ul.navbar-nav{
+		ul.nav{
 			li{
+				&.active{
+					a{
+						color: $gold;
+						background: $dark;
+						@include transition(.8s ease);
+						@include transition(.3s border-bottom ease);
+						border-bottom: 3px solid $gold;
+					}
+				}
 				a{
 					@include tablet{
 						font-size: 18px;
@@ -241,14 +255,12 @@ section#about{
 	padding: 100px 0;
 	height: auto;
 	background: #080808;
-	// @include background(url("../img/cross-background.png"), repeat);
 	p{
 		font-size: 14px;
 		line-height: 22px;
 		text-align: left;
 		text-indent: 30px;
 	}
-	h2,
 	h3{
 		color: #9d9d9d;
 	}
@@ -266,15 +278,8 @@ section#about{
 	}
 }
 
-section#faq{
-	background: steelblue;
-	.container{
-		background: red;
-	}
-}
-
 section#team{
-	background: tomato;
+	@include background(url("../img/cross-background.png"), repeat);
 }
 
 section#careers{
