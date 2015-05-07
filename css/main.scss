@@ -102,6 +102,9 @@ section{
 	h2+p{
 		font-size: 18px;
 	}
+	h3, h4, h5, h6{
+		text-transform: none;
+	}
 }
 
 
@@ -139,7 +142,10 @@ nav.navbar{
 		height: 60px;
 	}
 	img.logo{
-		height: 40px;
+		height: 30px;
+		@include tablet{
+			height: 40px;
+		}
 		margin-top: -7px;
 		@include transition(.5s ease);
 		&:hover{
@@ -207,7 +213,7 @@ section#intro {
 		// vertical-align: middle;
 	}
 	h1{
-		font-size: 50px;
+		font-size: 40px;
 		@include tablet {
 			font-size: 75px;
 		}
@@ -314,12 +320,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', end
 
 section#contact{
 	background: purple;
+	background: (url("../img/illusion-background.png"), repeat);
 }
 
 
 
-
-
+footer{
+	padding: 30px 0 15px;
+}
 
 
 
