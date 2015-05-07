@@ -5,8 +5,6 @@ $(function(){
 	// Fades in document upon loading
 	$('body').hide().fadeIn(2500);
 
-
-
 	// jQuery to collapse the navbar on scroll
 	$(window).scroll(function() {
 		if ($(".navbar").offset().top > 200) {
