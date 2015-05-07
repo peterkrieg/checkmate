@@ -94,6 +94,13 @@ section{
 	}
 	h2{
 		color: $gold;
+		font-size: 30px;
+		@include tablet{
+			font-size: 43px;
+		}
+	}
+	h2+p{
+		font-size: 18px;
 	}
 }
 
@@ -255,7 +262,7 @@ section#about{
 	padding: 100px 0;
 	height: auto;
 	background: #080808;
-	p{
+	p:not(.about-text){
 		font-size: 14px;
 		line-height: 22px;
 		text-align: left;
@@ -274,12 +281,24 @@ section#about{
 		font-size: 20px;
 	}
 	p.about-text{
+		font-size: 18px;
 		margin-bottom: 50px;
 	}
 }
 
 section#team{
 	@include background(url("../img/cross-background.png"), repeat);
+	height: auto;
+	.team-container{
+		max-width: 2000px;
+	}
+	img.icon{
+		height: 200px;
+		margin-bottom: 15px;
+	}
+	div.person{
+		margin-bottom: 30px;
+	}
 }
 
 section#careers{
