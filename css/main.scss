@@ -328,14 +328,26 @@ section#team{
 	@include background(url("../img/cross-background.png"), repeat);
 	height: auto;
 	.team-container{
-		max-width: 2000px;
+		max-width: 1230px;
 	}
-	img.icon{
+	div.checkmate-team{
+		margin-bottom: 50px;
+	}
+	img.headshot{
 		height: 200px;
 		margin-bottom: 15px;
 	}
+	h5{
+		margin-top: -20px;
+	}
 	div.person{
 		margin-bottom: 30px;
+	}
+	p.bio{
+		margin-top: 10px;
+		text-align: left;
+		text-indent: 30px;
+		line-height: 22px;
 	}
 }
 
