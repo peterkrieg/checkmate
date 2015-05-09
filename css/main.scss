@@ -297,9 +297,12 @@ section#intro {
 
 
 section#about{
+	background-color: #121212;
+	@include background(url("http://www.transparenttextures.com/patterns/noise-pattern-with-subtle-cross-lines.png"), repeat);
+	// @include background(url("http://www.transparenttextures.com/patterns/pw-pattern.png"), repeat);
+	background-attachment: fixed;
 	padding: 100px 0;
 	height: auto;
-	background: #080808;
 	p:not(.about-text){
 		font-size: 14px;
 		line-height: 22px;
@@ -325,7 +328,10 @@ section#about{
 }
 
 section#team{
-	@include background(url("../img/cross-background.png"), repeat);
+	// @include background(url("../img/cross-background.png"), repeat);
+	background-color: #121212;
+	@include background(url("http://www.transparenttextures.com/patterns/ps-neutral.png"), repeat);
+	background-attachment: fixed;
 	height: auto;
 	.team-container{
 		max-width: 1230px;
