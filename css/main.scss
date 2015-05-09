@@ -12,6 +12,7 @@ $grey: #9d9d9d;
 $lora: ""Lora","Helvetica Neue",Helvetica,Arial,sans-serif";
 $montserrat: ""Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif";
 
+$phoneOnly: "(min-width: 481px) and (max-width: 767)";
 
 
 $phone: "(min-width: 481px)";
@@ -42,6 +43,12 @@ $largedesktop: "(min-width: 1200px)";
 @mixin largedesktop {
 	@media #{$largedesktop} {
 		@content; 
+	}
+}
+
+@mixin phoneOnly{
+	@media #{$phoneOnly} {
+		@content;
 	}
 }
 
@@ -111,7 +118,7 @@ section{
 
 // --------------------Specific Styles, not generic--------------------------
 
-// ------------------------Navbar-----------------------------
+// ------------------------NAVBAR-----------------------------
 
 nav.navbar-fixed-top{
 	opacity: 0;
@@ -179,9 +186,13 @@ nav.navbar{
 					a{
 						color: $gold;
 						background: $dark;
-						@include transition(.8s ease);
-						@include transition(.3s border-bottom ease);
+						// @include transition(.8s ease);
+						// @include transition(.6s border-bottom ease); 
 						border-bottom: 3px solid $gold;
+						@include phoneOnly{
+							padding-left: 25px;
+							@include transition(1s padding-left ease);
+						}
 					}
 				}
 				a{
@@ -191,7 +202,7 @@ nav.navbar{
 						height: 60px;
 						padding-top: 20px;
 					}
-					@include transition(.3s ease);
+					@include transition(color .3s ease);
 					&:hover{
 						color: $gold;
 						background: none;
