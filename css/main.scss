@@ -152,6 +152,20 @@ nav.navbar{
 			opacity: .5;
 		}
 	}
+	div.navbar-header{
+		button.navbar-toggle{
+			background: $dark;
+			border: 1px solid $grey;
+			&:hover span.icon-bar{
+				background: $gold;
+				@include transition(.5s ease);
+			}
+		}
+		span.icon-bar{
+			@include transition(.3s ease);
+			background: $light;
+		}
+	}
 	div#navbar{
 		// Only floats navbar if tablet or bigger, so the mobile menu isn't messed up
 		@include tablet{
@@ -169,6 +183,7 @@ nav.navbar{
 					}
 				}
 				a{
+					color: $grey;
 					@include tablet{
 						font-size: 18px;
 						height: 60px;
@@ -177,6 +192,7 @@ nav.navbar{
 					@include transition(.3s ease);
 					&:hover{
 						color: $gold;
+						background: none;
 						@include transition(.6s ease);
 					}
 				}
