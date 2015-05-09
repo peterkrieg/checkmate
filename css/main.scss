@@ -149,7 +149,9 @@ nav.navbar{
 		margin-top: -7px;
 		@include transition(.5s ease);
 		&:hover{
-			opacity: .5;
+			// opacity: .7;
+			@include transform(scale(1.03));
+			@include transition(.4s ease);
 		}
 	}
 	div.navbar-header{
@@ -194,6 +196,9 @@ nav.navbar{
 						color: $gold;
 						background: none;
 						@include transition(.6s ease);
+					}
+					&:focus{
+						background: none;
 					}
 				}
 			}
