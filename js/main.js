@@ -1,8 +1,7 @@
 $(function(){
 
 
-
-
+alert('what ');
 
 
 	// Fades in document upon loading

@@ -8,9 +8,12 @@ module.exports = function(grunt) {
       options: {
         manage: false
       },
-      my_target: {
-        src : ['js/bootstrap/**/*.js', 'js/main.js'],
-        dest : 'js/checkmate.min.js'
+      all: {
+        files: {
+          'js/checkmate.min.js' : ['js/bootstrap.js', 'js/main.js']
+        }
+        // src : ['js/bootstrap.js', 'js/main.js'],
+        // dest : 'js/checkmate.min.js'
         
       }
     },
@@ -53,8 +56,13 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  // Newer is the thing that watches js sources and constantly compresses it, like sass watches
+  grunt.loadNpmTasks('grunt-newer');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
 
+  // grunt.registerTask('default', ['uglify:all']);
+  // grunt.registerTask('nw', ['newer:uglify:all']);
+
+  grunt.registerTask('default', ['newer:uglify:all']);
 };
