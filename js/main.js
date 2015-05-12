@@ -1,8 +1,6 @@
 $(function(){
 
 
-alert('what ');
-
 
 	// Fades in document upon loading
 	$('body').hide().fadeIn(2500);

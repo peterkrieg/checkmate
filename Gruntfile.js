@@ -9,11 +9,11 @@ module.exports = function(grunt) {
         manage: false
       },
       all: {
-        files: {
-          'js/checkmate.min.js' : ['js/bootstrap.js', 'js/main.js']
-        }
-        // src : ['js/bootstrap.js', 'js/main.js'],
-        // dest : 'js/checkmate.min.js'
+        // files: {
+        //   'js/checkmate.min.js' : ['js/bootstrap.js', 'js/main.js']
+        // }
+        src : ['js/bootstrap.js', 'js/main.js'],
+        dest : 'js/checkmate.min.js'
         
       }
     },
@@ -61,8 +61,8 @@ module.exports = function(grunt) {
 
   // Default task(s).
 
-  // grunt.registerTask('default', ['uglify:all']);
+  grunt.registerTask('default', ['uglify:all']);
   // grunt.registerTask('nw', ['newer:uglify:all']);
 
-  grunt.registerTask('default', ['newer:uglify:all']);
+  // grunt.registerTask('default', ['newer:uglify:all']);
 };
