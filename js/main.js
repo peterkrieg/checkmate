@@ -33,6 +33,18 @@ $(function(){
 
 
 
+ $('.moreabout').hide();
+ $('.clicktolearn').click(function(){
+ 	$('.moreabout').slideToggle(600);
+ })
+
+
+
+
+
+
+
+
 });
 
 
