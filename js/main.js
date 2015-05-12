@@ -34,9 +34,21 @@ $(function(){
 
 
  $('.moreabout').hide();
- $('.clicktolearn').click(function(){
- 	$('.moreabout').slideToggle(600);
+
+ $('a.pluslink').click(function(event){
+ 		// By blurring the element, it never allows bootstrap to apply weird :focus styling
+ 		$(this).blur();
+ 		event.preventDefault();
+ 		$('.moreabout').slideToggle(800);
+ 		if($(this).hasClass('reveal')){
+ 			$(this).removeClass('reveal');
+ 		}
+ 		else{
+ 			$(this).addClass('reveal');
+ 		}
  })
+
+
 
 
 

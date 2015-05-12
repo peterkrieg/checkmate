@@ -326,10 +326,26 @@ section#about{
 		margin-bottom: 50px;
 	}
 	div.moreabout{
-		height: 400px;
-		background: red;
 	}
-}
+
+	a.pluslink{
+		display: inline-block;
+		margin-top: -50px;
+		font-size: 100px;
+		color: $gold;
+		@include transition(.3s ease);
+		text-decoration: none;
+		&:hover{
+			@include transform(scale(1.05));
+		}
+		&.reveal{
+			@include transform(rotate(45deg));
+			@include transition(.8s ease);
+			color: $grey;
+		}
+	}
+
+}   // END OF ABOUT SECTION------
 
 section#team{
 	// @include background(url("../img/cross-background.png"), repeat);
