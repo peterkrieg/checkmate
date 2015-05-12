@@ -325,8 +325,6 @@ section#about{
 		font-size: 18px;
 		margin-bottom: 50px;
 	}
-	div.moreabout{
-	}
 
 	a.pluslink{
 		display: inline-block;
@@ -342,6 +340,12 @@ section#about{
 			@include transform(rotate(45deg));
 			@include transition(.8s ease);
 			color: $grey;
+		}
+	}
+
+	div.moreabout{
+		img{
+			width: 90%;
 		}
 	}
 

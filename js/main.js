@@ -1,9 +1,12 @@
 $(function(){
-
-
-
+	
 	// Fades in document upon loading
 	$('body').hide().fadeIn(2500);
+
+	// This prevents bootstrap from focusing on links when clicked
+	$('a').click(function(){
+		$(this).blur();
+	});
 
 	// jQuery to collapse the navbar on scroll
 	$(window).scroll(function() {
@@ -33,25 +36,21 @@ $(function(){
 
 
 
- $('.moreabout').hide();
+	$('.moreabout').hide();
 
- $('a.pluslink').click(function(event){
+	$('a.pluslink').click(function(event){
  		// By blurring the element, it never allows bootstrap to apply weird :focus styling
  		$(this).blur();
  		event.preventDefault();
- 		$('.moreabout').slideToggle(800);
  		if($(this).hasClass('reveal')){
  			$(this).removeClass('reveal');
+ 			$('.moreabout').slideToggle(200);
  		}
  		else{
  			$(this).addClass('reveal');
+ 			$('.moreabout').slideToggle(800);
  		}
- })
-
-
-
-
-
+ 	});
 
 
 
