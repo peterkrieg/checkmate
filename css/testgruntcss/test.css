@@ -1,0 +1,11 @@
+a{
+	color: blue;
+}
+
+p{
+	color: tomato;
+}
+
+div p{
+	color: green;
+}
