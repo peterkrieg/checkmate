@@ -12,7 +12,9 @@ $grey: #9d9d9d;
 $lora: ""Lora","Helvetica Neue",Helvetica,Arial,sans-serif";
 $montserrat: ""Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif";
 
-$phoneOnly: "(min-width: 481px) and (max-width: 767)";
+$phoneOnly: "(min-width: 481px) and (max-width: 767px)";
+$tabletOnly: "(min-width: 768px) and (max-width: 991px)";
+
 
 
 $phone: "(min-width: 481px)";
@@ -48,6 +50,12 @@ $largedesktop: "(min-width: 1200px)";
 
 @mixin phoneOnly{
 	@media #{$phoneOnly} {
+		@content;
+	}
+}
+
+@mixin tabletOnly{
+	@media #{$tabletOnly} {
 		@content;
 	}
 }
@@ -151,6 +159,9 @@ nav.navbar{
 	img.logo{
 		height: 30px;
 		@include tablet{
+			height: 35px;
+		}
+		@include desktop{
 			height: 40px;
 		}
 		margin-top: -7px;
@@ -198,9 +209,12 @@ nav.navbar{
 				a{
 					color: $grey;
 					@include tablet{
-						font-size: 18px;
+						font-size: 16px;
 						height: 60px;
 						padding-top: 20px;
+					}
+					@include desktop{
+						font-size: 19px;
 					}
 					@include transition(color .3s ease);
 					&:hover{
@@ -392,6 +406,16 @@ background: -ms-linear-gradient(-45deg,  rgba(38,38,38,1) 0%,rgba(33,33,33,1) 34
 background: linear-gradient(135deg,  rgba(38,38,38,1) 0%,rgba(33,33,33,1) 34%,rgba(33,33,33,1) 34%,rgba(33,33,33,1) 41%,rgba(16,16,16,1) 73%,rgba(0,0,0,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+
+
+section#news{
+	background: #121212;
+}
+
+
+
+
 
 section#contact{
 	background: purple;
