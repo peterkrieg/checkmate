@@ -123,6 +123,28 @@ section{
 }
 
 
+// Componenets for entire page
+
+// The plus sign that expands content in different places
+a.pluslink,
+a.pluslinkperson{
+		display: inline-block;
+		margin-top: -50px;
+		font-size: 100px;
+		color: $gold;
+		@include transition(.3s ease);
+		text-decoration: none;
+		&:hover{
+			@include transform(scale(1.05));
+		}
+		&.reveal{
+			@include transform(rotate(45deg));
+			@include transition(.8s ease);
+			color: $grey;
+		}
+	}
+
+
 
 // --------------------Specific Styles, not generic--------------------------
 
@@ -201,8 +223,10 @@ nav.navbar{
 						// @include transition(.6s border-bottom ease); 
 						border-bottom: 3px solid $gold;
 						@include phoneOnly{
-							padding-left: 25px;
+							// padding-left: 25px;
 							@include transition(1s padding-left ease);
+							border-bottom: none;
+							text-decoration: underline;
 						}
 					}
 				}
@@ -289,19 +313,16 @@ section#intro {
 		font-size: 40px;
 		color: $light;
 		background: transparent;
-		@include transition(.3s ease);
+		@include transition(.7s ease);
 		i{
 			@include transition(.3s ease);
 		}
 		&:hover {
-			outline: none;
-			color: $gold;
 			border-color: $gold;
-			@include transition(.7s ease);
+			@include transition(.3s ease);
 			i{
 				transform: translateY(2px);
 				color: $gold;
-				@include transition(.5s ease);
 			}
 		}
 	}
@@ -341,20 +362,7 @@ section#about{
 	}
 
 	a.pluslink{
-		display: inline-block;
-		margin-top: -50px;
 		font-size: 100px;
-		color: $gold;
-		@include transition(.3s ease);
-		text-decoration: none;
-		&:hover{
-			@include transform(scale(1.05));
-		}
-		&.reveal{
-			@include transform(rotate(45deg));
-			@include transition(.8s ease);
-			color: $grey;
-		}
 	}
 
 	div.moreabout{
@@ -384,15 +392,33 @@ section#team{
 	}
 	h5{
 		margin-top: -20px;
+		margin-bottom: 30px;
+	}
+	h6{
+		@include desktop{
+			display: none;
+		}
 	}
 	div.person{
 		margin-bottom: 30px;
 	}
 	p.bio{
-		margin-top: 10px;
+		margin-top: -20px;
 		text-align: left;
 		text-indent: 30px;
 		line-height: 22px;
+		display: none;
+		@include desktop{
+			margin-top: 10px;
+			display: block
+		}
+	}
+	a.pluslinkperson{
+		margin-top: -70px;
+		font-size: 90px;
+		@include desktop{
+			display: none;
+		}
 	}
 }
 
@@ -411,6 +437,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', end
 
 section#news{
 	background: #121212;
+	@include background(url("http://www.transparenttextures.com/patterns/noise-pattern-with-subtle-cross-lines.png"), repeat);
 }
 
 

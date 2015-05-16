@@ -38,9 +38,8 @@ $(function(){
 
 	$('.moreabout').hide();
 
+	// Expand more info on about page
 	$('a.pluslink').click(function(event){
- 		// By blurring the element, it never allows bootstrap to apply weird :focus styling
- 		$(this).blur();
  		event.preventDefault();
  		if($(this).hasClass('reveal')){
  			$(this).removeClass('reveal');
@@ -49,6 +48,19 @@ $(function(){
  		else{
  			$(this).addClass('reveal');
  			$('.moreabout').slideToggle(800);
+ 		}
+ 	});
+
+	// Expand bio for each person
+ 	$('a.pluslinkperson').click(function(event){
+ 		event.preventDefault();
+ 		if($(this).hasClass('reveal')){
+ 			$(this).removeClass('reveal');
+ 			$(this).next().slideToggle(200);
+ 		}
+ 		else{
+ 			$(this).addClass('reveal');
+ 			$(this).next().slideToggle(800);
  		}
  	});
 
