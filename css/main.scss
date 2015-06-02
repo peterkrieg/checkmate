@@ -270,6 +270,15 @@ section#intro {
 	color: $light;
 	text-align: center;
 	background: url(../img/background.jpg) no-repeat bottom center scroll;
+	// For showing a second index file, delete when done with it
+	html.index2 & {
+		background: url(../img/backgrounddarker2.jpg) no-repeat bottom center scroll;
+		background-color: $dark;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+	}
 	background-color: $dark;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
