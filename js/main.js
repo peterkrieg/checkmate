@@ -64,6 +64,17 @@ $(function(){
  		}
  	});
 
+ 	// Reveal Team drop down menu when mouseover
+ 	$('li.teamDropDownItem').on('mouseenter', function(){
+ 		// Show a small div that just blocks certain pixels of gold border, a messy hack around solution
+ 		$('div.blockGoldBorder').show();
+ 		$('ul.teamDropDownMenu').slideDown(500);
+ 	})
+ 	$('li.teamDropDownItem').on('mouseleave', function(){
+ 		$('div.blockGoldBorder').delay(199).hide();
+ 		$('ul.teamDropDownMenu').slideUp(200);
+ 	})
+
 
 
 
