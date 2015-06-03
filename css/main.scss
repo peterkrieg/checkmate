@@ -504,6 +504,12 @@ section#news{
 section#contact{
 	background: purple;
 	background: (url("../img/illusion-background.png"), repeat);
+	p{
+		font-size: 18px;
+		&:first-of-type{
+			margin-bottom: 100px;
+		}
+	}
 }
 
 
