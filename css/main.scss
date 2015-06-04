@@ -251,16 +251,19 @@ nav.navbar{
 					}
 				}
 			}
+
+
+			// This little 8x100 px block is a hack to show gold border, maybe a cleaner way to do it..
+		
+			
 			li.teamDropDownItem{
-				// background: red;
-				// border-bottom: red solid 2px;
-				&:hover{
-					a{
-						// border-bottom: none;
-					}
+				&.active li a{
+					border: none;
+					color: $grey;
 				}
 			}
-			// This little 8x100 px block is a hack to show gold border, maybe a cleaner way to do it..
+
+
 			div.blockGoldBorder{
 				display: none;
 				background: $dark;
@@ -271,6 +274,7 @@ nav.navbar{
 				top: 54px;
 				z-index: 100;
 			}
+
 			ul.teamDropDownMenu{
 				z-index: 100;
 				display: none;
@@ -281,22 +285,27 @@ nav.navbar{
 				}
 				width: 100px;
 				background: $dark;
-				// padding: 5px 10px;
 				padding: 0;
 				border: 1px solid $grey;
 				border-top: none;
 				li{
+					background: $dark;
 					list-style-type: none;
-					&:first-child{
-						border-bottom: 1px solid $grey;
+					&:nth-child(2){
+						border-top: 1px solid $grey;
 					}
-					// background: tomato;
 					margin: 0;
 					padding: 10px 10px 10px 5px;
 					a{
 						font-size: 12px;
+						background: none;
 						&:hover{
 							text-decoration: none;
+							color: $gold;
+						}
+						&:focus{
+							text-decoration: none;
+							color: $grey;
 						}
 					}
 				}
