@@ -350,8 +350,39 @@ section#intro {
 		margin-top: -80px;
 		padding-top: 80px;
 		color: $gold;
+		html.index2 &{
+			color: white;
+		}
 		// Separate image for crown, to put over text
 		background: url(../img/crowngold.png) no-repeat;
+		html.index2 &{
+			background: url(../img/crownwhite.png) no-repeat;
+			margin-bottom: 10px;
+		width: 340px;
+		font-size: 50px;
+		background-size: 1.61*27px 27px;
+		background-position: 265px 63px;
+		@include tablet {
+			margin-bottom: 10px;
+			width: 595px;
+			font-size: 90px;
+			background-size: 1.61*45px 45px;
+			background-position: 474px 56px;
+		}
+		@include desktop{
+			width: 728px;
+			font-size: 110px;
+			background-size: 1.61*55px 55px;
+			background-position: 575px 51px
+		}
+		@include largedesktop{
+			width: 930px;
+			font-size: 140px;
+			background-size: 1.61*70px 70px;
+			background-position: 729px 44px;
+		}
+		}
+
 
 		// mobile first size of phone
 		// I include 4 different media queries for different devices, adjusting height of 
@@ -383,9 +414,17 @@ section#intro {
 			background-position: 729px 44px;
 		}
 	}
+
+
+
+
+
 	h2{
 		font-size: 30px;
 		color: $gold;
+		html.index2 &{
+			color: white;
+		}
 		margin-top: -10px;
 		@include desktop{
 			font-size: 65px;
