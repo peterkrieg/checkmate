@@ -16,13 +16,19 @@ $phoneOnly: "(max-width: 767px)";
 $tabletOnly: "(min-width: 768px) and (max-width: 991px)";
 
 
-
-$phone: "(max-width: 767px)";
+$smallphone: "(max-width: 560px)";
+$phone: "(min-width: 561px)";
 $tablet: "(min-width: 768px)";
 $desktop: "(min-width: 992px)";
 $largedesktop: "(min-width: 1200px)";
 
 // ------------------------Mixins-----------------------------
+
+@mixin smallphone {
+	@media #{$smallphone} {
+		@content;
+	}
+}
 
 @mixin phone {
 	@media #{$phone} {
@@ -343,6 +349,7 @@ section#intro {
 		// vertical-align: middle;
 	}
 	h1{
+		display: inline;
 		margin: auto;
 		text-align: left;
 		// margin and padding cancel each other out for vertical positioning. 
@@ -354,64 +361,66 @@ section#intro {
 			color: white;
 		}
 		// Separate image for crown, to put over text
-		background: url(../img/crowngold.png) no-repeat;
+		background: url(../img/crowngold.jpg) no-repeat;
 		html.index2 &{
 			background: url(../img/crownwhite.png) no-repeat;
 			margin-bottom: 10px;
-		width: 340px;
-		font-size: 50px;
-		background-size: 1.61*27px 27px;
-		background-position: 265px 63px;
+		font-size: 40px;
+		background-size: 1.61*22px 22px;
+		background-position: 213px 68px;
+		@include phone{
+			font-size: 60px;
+			background-size: 1.61*31px 31px;
+			background-position: 318px 64px;
+		}
 		@include tablet {
 			margin-bottom: 10px;
-			width: 595px;
 			font-size: 90px;
 			background-size: 1.61*45px 45px;
-			background-position: 474px 56px;
+			background-position: 474px 58px;
 		}
 		@include desktop{
-			width: 728px;
 			font-size: 110px;
 			background-size: 1.61*55px 55px;
-			background-position: 575px 51px
+			background-position: 575px 55px
 		}
 		@include largedesktop{
-			width: 930px;
-			font-size: 140px;
-			background-size: 1.61*70px 70px;
-			background-position: 729px 44px;
+			font-size: 120px;
+			background-size: 1.61*66px 66px;
+			background-position: 624px 49px;
 		}
 		}
 
 
-		// mobile first size of phone
+		// mobile first size of smallphone
 		// I include 4 different media queries for different devices, adjusting height of 
 		// h1 element and the position/size of background image.  I make width of h1 
 		// just barely wide enough to contain the text at given font-size, so margin: auto 
-		// actually centers the element.  Not the best way to accomplish this probably.  
+		// actually centers the element.  Not the best way to accomplish this probably. 
 		margin-bottom: 10px;
-		width: 340px;
-		font-size: 50px;
-		background-size: 1.61*27px 27px;
-		background-position: 265px 63px;
+		font-size: 40px;
+		background-size: 1.61*22px 22px;
+		background-position: 213px 68px;
+		@include phone{
+			font-size: 60px;
+			background-size: 1.61*31px 31px;
+			background-position: 318px 64px;
+		}
 		@include tablet {
 			margin-bottom: 10px;
-			width: 595px;
 			font-size: 90px;
 			background-size: 1.61*45px 45px;
-			background-position: 474px 56px;
+			background-position: 474px 58px;
 		}
 		@include desktop{
-			width: 728px;
 			font-size: 110px;
 			background-size: 1.61*55px 55px;
-			background-position: 575px 51px
+			background-position: 575px 53px
 		}
 		@include largedesktop{
-			width: 930px;
-			font-size: 140px;
-			background-size: 1.61*70px 70px;
-			background-position: 729px 44px;
+			font-size: 120px;
+			background-size: 1.61*66px 66px;
+			background-position: 624px 49px;
 		}
 	}
 
@@ -420,13 +429,22 @@ section#intro {
 
 
 	h2{
-		font-size: 30px;
+		font-size: 20px;
+		margin-top: -10px;
 		color: $gold;
 		html.index2 &{
 			color: white;
 		}
-		margin-top: -10px;
+		@include phone{
+			font-size: 30px;
+		}
+		@include tablet{
+			font-size: 40px;
+		}
 		@include desktop{
+			font-size: 55px;
+		}
+		@include largedesktop{
 			font-size: 65px;
 		}
 	}
