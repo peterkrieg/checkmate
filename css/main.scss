@@ -424,6 +424,23 @@ section#intro {
 		}
 	}
 
+	img.checkmateheader{
+			width: 300px;
+			margin-bottom: 20px;
+			@include phone{
+				width: 450px;
+			}
+			@include tablet{
+				width: 600px;
+			}
+			@include desktop{
+				width: 750px;
+			}
+			@include largedesktop{
+				width: 950px;
+			}
+		}
+
 
 
 

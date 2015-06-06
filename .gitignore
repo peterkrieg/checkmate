@@ -1,4 +1,5 @@
 *.css
+*.ai
 !test.css
 !test.min.css
 *.css.map
