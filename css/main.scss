@@ -518,9 +518,10 @@ section#about{
 	background-attachment: fixed;
 	padding: 100px 0;
 	height: auto;
-	p:not(.about-text){
-		font-size: 14px;
-		line-height: 22px;
+	p.first-info-about,
+	p.second-info-about{
+		font-size: 15px;
+		line-height: 23px;
 		text-align: left;
 		text-indent: 30px;
 	}
@@ -548,6 +549,9 @@ section#about{
 	div.moreabout{
 		img{
 			width: 90%;
+		}
+		p{
+			font-size: 15px;
 		}
 	}
 
@@ -589,9 +593,12 @@ section#team{
 		margin-bottom: 30px;
 	}
 	p.bio{
+		font-size: 15px;
+		@include tablet{
+			font-size: 16px;
+		}
 		margin-top: -20px;
 		text-align: left;
-		text-indent: 30px;
 		line-height: 22px;
 		display: none;
 		@include desktop{
@@ -645,6 +652,16 @@ section#contact{
 
 footer{
 	padding: 25px 0 10px;
+	p.webmaster{
+		font-size: 13px;
+		a{
+			color: $light;
+			text-decoration: underline;
+			&:hover{
+				color: $gold;
+			}
+		}
+	}
 }
 
 
