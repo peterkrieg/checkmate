@@ -362,34 +362,7 @@ section#intro {
 		}
 		// Separate image for crown, to put over text
 		background: url(../img/crowngold.jpg) no-repeat;
-		html.index2 &{
-			background: url(../img/crownwhite.png) no-repeat;
-			margin-bottom: 10px;
-		font-size: 40px;
-		background-size: 1.61*22px 22px;
-		background-position: 213px 68px;
-		@include phone{
-			font-size: 60px;
-			background-size: 1.61*31px 31px;
-			background-position: 318px 64px;
-		}
-		@include tablet {
-			margin-bottom: 10px;
-			font-size: 90px;
-			background-size: 1.61*45px 45px;
-			background-position: 474px 58px;
-		}
-		@include desktop{
-			font-size: 110px;
-			background-size: 1.61*55px 55px;
-			background-position: 575px 55px
-		}
-		@include largedesktop{
-			font-size: 120px;
-			background-size: 1.61*66px 66px;
-			background-position: 624px 49px;
-		}
-		}
+		
 
 
 		// mobile first size of smallphone
@@ -397,31 +370,6 @@ section#intro {
 		// h1 element and the position/size of background image.  I make width of h1 
 		// just barely wide enough to contain the text at given font-size, so margin: auto 
 		// actually centers the element.  Not the best way to accomplish this probably. 
-		margin-bottom: 10px;
-		font-size: 40px;
-		background-size: 1.61*22px 22px;
-		background-position: 213px 68px;
-		@include phone{
-			font-size: 60px;
-			background-size: 1.61*31px 31px;
-			background-position: 318px 64px;
-		}
-		@include tablet {
-			margin-bottom: 10px;
-			font-size: 90px;
-			background-size: 1.61*45px 45px;
-			background-position: 474px 58px;
-		}
-		@include desktop{
-			font-size: 110px;
-			background-size: 1.61*55px 55px;
-			background-position: 575px 53px
-		}
-		@include largedesktop{
-			font-size: 120px;
-			background-size: 1.61*66px 66px;
-			background-position: 624px 49px;
-		}
 	}
 
 	img.checkmateheader{
@@ -437,7 +385,7 @@ section#intro {
 				width: 750px;
 			}
 			@include largedesktop{
-				width: 950px;
+				width: 900px;
 			}
 		}
 
@@ -485,14 +433,20 @@ section#intro {
 		}
 	}
 	.btn-circle {
-		width: 70px;
-		height: 70px;
-		padding: 7px 16px;
+		width: 50px;
+		height: 50px;
+		padding: 5px 14px;
 		border: 2px solid $light;
 		border-radius: 35px;
-		font-size: 40px;
+		font-size: 30px;
 		color: $light;
 		background: transparent;
+		@include tablet{
+			height: 70px;
+			width: 70px;
+			font-size: 40px;
+			padding: 7px 16px;
+		}
 		@include transition(.7s ease);
 		i{
 			@include transition(.3s ease);
@@ -641,7 +595,7 @@ section#news{
 	height: auto;
 	background: #121212;
 	@include background(url("http://www.transparenttextures.com/patterns/noise-pattern-with-subtle-cross-lines.png"), repeat);
-	padding: 100px 0 200px 0;
+	padding: 100px 0 300px 0;
 }
 
 
@@ -689,12 +643,13 @@ footer{
 	p.webmaster{
 		font-size: 13px;
 		a{
+			@include transition(.5s ease);
 			color: $grey;
 			text-decoration: underline;
 			&:hover{
 				text-decoration: none;
 				color: $gold;
-				@include transition(.5s ease);
+				@include transition(.8s ease);
 				@include transform(rotateX(360deg));
 			}
 		}
