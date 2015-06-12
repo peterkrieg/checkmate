@@ -634,22 +634,14 @@ section#team{
 	}
 }
 
-section#careers{
-background: rgb(38,38,38); /* Old browsers */
-background: -moz-linear-gradient(-45deg,  rgba(38,38,38,1) 0%, rgba(33,33,33,1) 34%, rgba(33,33,33,1) 34%, rgba(33,33,33,1) 41%, rgba(16,16,16,1) 73%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(38,38,38,1)), color-stop(34%,rgba(33,33,33,1)), color-stop(34%,rgba(33,33,33,1)), color-stop(41%,rgba(33,33,33,1)), color-stop(73%,rgba(16,16,16,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(-45deg,  rgba(38,38,38,1) 0%,rgba(33,33,33,1) 34%,rgba(33,33,33,1) 34%,rgba(33,33,33,1) 41%,rgba(16,16,16,1) 73%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(-45deg,  rgba(38,38,38,1) 0%,rgba(33,33,33,1) 34%,rgba(33,33,33,1) 34%,rgba(33,33,33,1) 41%,rgba(16,16,16,1) 73%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(-45deg,  rgba(38,38,38,1) 0%,rgba(33,33,33,1) 34%,rgba(33,33,33,1) 34%,rgba(33,33,33,1) 41%,rgba(16,16,16,1) 73%,rgba(0,0,0,1) 100%); /* IE10+ */
-background: linear-gradient(135deg,  rgba(38,38,38,1) 0%,rgba(33,33,33,1) 34%,rgba(33,33,33,1) 34%,rgba(33,33,33,1) 41%,rgba(16,16,16,1) 73%,rgba(0,0,0,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
 
 
 
 section#news{
+	height: auto;
 	background: #121212;
 	@include background(url("http://www.transparenttextures.com/patterns/noise-pattern-with-subtle-cross-lines.png"), repeat);
+	padding: 100px 0 200px 0;
 }
 
 
@@ -692,11 +684,12 @@ section#contact{
 
 
 footer{
+	color: $grey;
 	padding: 25px 0 10px;
 	p.webmaster{
 		font-size: 13px;
 		a{
-			color: $light;
+			color: $grey;
 			text-decoration: underline;
 			&:hover{
 				text-decoration: none;
