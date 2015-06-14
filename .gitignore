@@ -2,6 +2,5 @@
 !test.css
 !test.min.css
 *.css.map
-*.ai
 css/.sass-cache/
 node_modules/
