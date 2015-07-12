@@ -297,8 +297,8 @@ nav.navbar{
 				li{
 					background: $dark;
 					list-style-type: none;
-					&:nth-child(2){
-						border-top: 1px solid $grey;
+					&:not(:last-child){
+						border-bottom: 1px solid $grey;
 					}
 					margin: 0;
 					padding: 10px 10px 10px 5px;
