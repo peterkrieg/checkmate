@@ -78,16 +78,18 @@ $(function(){
 
  	// Drop down panels for team section
 
+ 	// Event whenever one of 3 panels managemenet, board of directors, or advisor is clicked
  	$('.panel').click(function(event){
- 		$('.reveal').removeClass('reveal').slideToggle(200);
- 		$('.panel-hidden').slideToggle(200).removeClass('panel-hidden');
- 		
-
-
- 		console.log($(this));
+ 		// First hide any accordions that were open before, and re-show panel
+ 		$('.reveal').removeClass('reveal').toggle();
+ 		$('.panel-hidden').toggle().removeClass('panel-hidden');
  		event.preventDefault();
- 		$(this).parent().addClass('panel-hidden').slideToggle(200);
- 		$(this).parent().next().removeClass('hidden').addClass('reveal').hide().fadeIn(500);
+ 		var $accordion = $(this).parent().next();
+ 		$(this).parent().addClass('panel-hidden').slideToggle();
+ 		$accordion.removeClass('hidden').addClass('reveal').hide().fadeIn(500);
+ 		$('html, body').stop().animate({
+				scrollTop: $($accordion).offset().top-300
+			}, 0, 'easeInOutExpo');	
  	})
 
 
