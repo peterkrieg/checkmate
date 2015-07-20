@@ -76,6 +76,15 @@ $(function(){
  	})
 
 
+ 	// Drop down panels for team section
+
+ 	$('.panel').click(function(event){
+ 		console.log($(this));
+ 		event.preventDefault();
+ 		$(this).parent().slideToggle(200);
+ 	})
+
+
 
 
 

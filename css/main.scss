@@ -175,7 +175,7 @@ nav.top-nav-appear{
 
 
 
-
+// NAVBAR
 nav.navbar{
 	font-family: $montserrat;
 	text-transform: uppercase;
@@ -329,7 +329,7 @@ nav.navbar{
 
 
 
-
+// Intro picture and text
 section#intro {
 	width: 100%;
 	height: 100%;
@@ -464,7 +464,7 @@ section#intro {
 // ------------------------End of Intro-----------------------------
 
 
-
+// About section
 section#about{
 	background-color: #121212;
 	@include background(url("http://www.transparenttextures.com/patterns/noise-pattern-with-subtle-cross-lines.png"), repeat);
@@ -530,6 +530,7 @@ section#about{
 
 }   // END OF ABOUT SECTION------
 
+// Team section
 section#team{
 	// @include background(url("../img/cross-background.png"), repeat);
 	background-color: #000000;
@@ -541,6 +542,13 @@ section#team{
 	}
 	div.checkmate-team{
 		margin-bottom: 50px;
+	}
+	div.panel{
+		height: 200px;
+		background-color: darkblue;
+		&:hover{
+			cursor: pointer;
+		}
 	}
 	img.headshot{
 		height: 250px;
