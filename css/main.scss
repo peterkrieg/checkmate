@@ -544,8 +544,13 @@ section#team{
 		margin-bottom: 50px;
 	}
 	div.panel{
-		height: 200px;
-		background-color: darkblue;
+		height: 80px;
+		background-color: #121212;
+		span.plus-panel{
+			display: block;
+			font-size: 50px;
+			font-weight: normal;
+		}
 		&:hover{
 			cursor: pointer;
 		}
