@@ -79,9 +79,15 @@ $(function(){
  	// Drop down panels for team section
 
  	$('.panel').click(function(event){
+ 		$('.reveal').removeClass('reveal').slideToggle(200);
+ 		$('.panel-hidden').slideToggle(200).removeClass('panel-hidden');
+ 		
+
+
  		console.log($(this));
  		event.preventDefault();
- 		$(this).parent().slideToggle(200);
+ 		$(this).parent().addClass('panel-hidden').slideToggle(200);
+ 		$(this).parent().next().removeClass('hidden').addClass('reveal').hide().fadeIn(500);
  	})
 
 
