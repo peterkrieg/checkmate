@@ -1,5 +1,7 @@
 $(function(){
 	
+	// ---------------Basic Preliminary actions-------------
+
 	// Fades in document upon loading
 	$('body').hide().fadeIn(2500);
 
@@ -34,8 +36,7 @@ $(function(){
 	});
 
 
-
-
+	// Hides the extra science content, until user clicks plus
 	$('.moreabout').hide();
 
 	// Expand more info on about page
@@ -88,7 +89,7 @@ $(function(){
  		$(this).parent().addClass('panel-hidden').slideToggle();
  		$accordion.removeClass('hidden').addClass('reveal').hide().fadeIn(500);
  		$('html, body').stop().animate({
-				scrollTop: $($accordion).offset().top-300
+				scrollTop: $($accordion).offset().top-190
 			}, 0, 'easeInOutExpo');	
  	})
 
