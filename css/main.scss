@@ -544,15 +544,15 @@ section#team{
 		margin-bottom: 50px;
 	}
 	div.panel{
+		padding-top: 15px;
 		height: 80px;
-		background-color: #121212;
-		span.plus-panel{
-			display: block;
-			font-size: 50px;
-			font-weight: normal;
-		}
+		background-color: rgba(18, 18, 18, .8);
+		@include transition(.2s ease);
 		&:hover{
 			cursor: pointer;
+			background-color: rgba(18, 18, 18, .7);
+			@include transform(scale(1.02));
+			@include transition(.5s ease);
 		}
 	}
 	div.hidden{
