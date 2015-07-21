@@ -97,12 +97,15 @@ $(function(){
  	// Event when one of 3 panels is clicked 
  	$('.panel').click(function(event){
  		event.preventDefault();
- 		var category = $(this).attr('name');
+ 		var category = $(this).attr('data-category');
  		openPanel(category);
  	});
 
  	// Event when one of 3 links is clicked on team drop down menu
  	$('.teamDropDownMenu a').click(function(event){
+ 		// First hide the drop down menu
+ 		$('div.blockGoldBorder').delay(199).hide();
+ 		$('ul.teamDropDownMenu').slideUp(200);
  		event.preventDefault();
  		var category = $(this).attr('href');
  		openPanel(category);
