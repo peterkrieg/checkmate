@@ -77,21 +77,52 @@ $(function(){
  	})
 
 
- 	// Drop down panels for team section
+ 	// Drop down Accordions for team section
+ 	// Terminology: panel refers to rectangle--3 rectangles present upon page load
+ 	// Accordion refers to content that opens when panel is clicked.  Max one accordion open at a time
 
  	// Event whenever one of 3 panels managemenet, board of directors, or advisor is clicked
- 	$('.panel').click(function(event){
- 		// First hide any accordions that were open before, and re-show panel
- 		$('.reveal').removeClass('reveal').toggle();
- 		$('.panel-hidden').toggle().removeClass('panel-hidden');
- 		event.preventDefault();
- 		var $accordion = $(this).parent().next();
- 		$(this).parent().addClass('panel-hidden').slideToggle();
+ 	// $('.panel').click(function(event){
+ 	// 	// First hide any accordions that were open before, and re-show panel
+ 	// 	$('.reveal').removeClass('reveal').toggle();
+ 	// 	$('.panel-hidden').toggle().removeClass('panel-hidden');
+ 	// 	event.preventDefault();
+ 	// 	var $accordion = $(this).parent().next();
+ 	// 	$(this).parent().addClass('panel-hidden').slideToggle();
+ 	// 	$accordion.removeClass('hidden').addClass('reveal').hide().fadeIn(500);
+ 	// 	$('html, body').stop().animate({
+		// 		scrollTop: $($accordion).offset().top-190
+		// 	}, 0, 'easeInOutExpo');	
+ 	// })
+
+ 	function openPanel(category){
+ 		//  Just to be same any defaults prevented.. not sure exactly about this
+ 		// first hide accordions that were open before
+ 		$('.accordion.reveal').removeClass('reveal').toggle();
+ 		// Show the panel that was hidden before, if it applies
+ 		$('.panel-hidden').removeClass('panel-hidden').toggle();
+ 		// Access DOM elements based on category
+ 		var $accordion = $('.accordion.'+category);
+ 		var $panel = $accordion.prev();
+ 		// Hide panel that was chosen, and reveal accordion selected
+ 		$panel.addClass('panel-hidden').slideToggle();
  		$accordion.removeClass('hidden').addClass('reveal').hide().fadeIn(500);
+ 		// Scroll page to location of accordion
  		$('html, body').stop().animate({
 				scrollTop: $($accordion).offset().top-190
-			}, 0, 'easeInOutExpo');	
- 	})
+			}, 0, 'easeInOutExpo');
+ 	};
+
+ 	// Event when one of 3 panels is clicked (managemenet, directors, or advisor)
+ 	$('.panel').click(function(event){
+ 		event.preventDefault();
+ 		var category = $(this).attr('name');
+ 		console.log(category);
+ 		openPanel(category);
+ 	});
+
+ 	// Event when one of 3 links is clicked on team drop down menu
+ 	
 
 
 
