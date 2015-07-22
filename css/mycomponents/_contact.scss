@@ -1,0 +1,32 @@
+section#contact{
+	height: auto;
+	background: purple;
+	background: (url("../img/illusion-background.png"), repeat);
+	p{
+		font-size: 18px;
+		&:first-of-type{
+			margin-bottom: 100px;
+		}
+	}
+	ul{
+		font-size: 15px;
+		// background: red;
+		border-bottom: 2px solid $light;
+		margin: auto;
+		width: 270px;
+		i.checkmate-office-icon{
+			margin-right: 20px;
+			position: relative;
+			top: 65px;
+			left: -120px;
+		}
+		li{
+			padding-left: 20px;
+			// background: green;
+			width: 220px;
+			margin: auto;
+			list-style-type: none;
+			text-align: left;
+		}
+	}
+}

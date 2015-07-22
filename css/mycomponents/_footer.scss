@@ -1,0 +1,18 @@
+footer{
+	color: $grey;
+	padding: 25px 0 10px;
+	p.webmaster{
+		font-size: 13px;
+		a{
+			@include transition(.5s ease);
+			color: $grey;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+				color: $gold;
+				@include transition(.8s ease);
+				@include transform(rotateX(360deg));
+			}
+		}
+	}
+}

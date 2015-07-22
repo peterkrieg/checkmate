@@ -1,0 +1,75 @@
+// Team section
+section#team{
+	// @include background(url("../img/cross-background.png"), repeat);
+	background-color: #000000;
+	@include background(url("http://www.transparenttextures.com/patterns/ps-neutral.png"), repeat);
+	background-attachment: fixed;
+	height: auto;
+	.team-container{
+		max-width: 1530px;
+	}
+	div.checkmate-team{
+		margin-bottom: 50px;
+	}
+	div.panel{
+		padding-top: 15px;
+		height: 80px;
+		background-color: rgba(18, 18, 18, .8);
+		@include transition(.2s ease);
+		&:hover{
+			cursor: pointer;
+			background-color: rgba(18, 18, 18, .7);
+			@include transform(scale(1.02));
+			@include transition(.5s ease);
+		}
+	}
+	div.hidden{
+		display: none;
+	}
+	img.headshot{
+		height: 250px;
+		margin-bottom: 15px;
+		border: 1px solid $grey;
+	}
+	h3{
+		margin-top: 10px;
+		color: $gold;
+		text-transform: uppercase;
+	}
+
+	h5{
+		margin-top: -20px;
+		margin-bottom: 30px;
+		margin-left: 15%;
+		width: 70%;
+	}
+	h6{
+		@include desktop{
+			display: none;
+		}
+	}
+	div.person{
+		margin-bottom: 30px;
+	}
+	p.bio{
+		font-size: 15px;
+		@include tablet{
+			font-size: 16px;
+		}
+		margin-top: -20px;
+		text-align: left;
+		line-height: 22px;
+		display: none;
+		@include desktop{
+			margin-top: 10px;
+			display: block
+		}
+	}
+	a.pluslinkperson{
+		margin-top: -70px;
+		font-size: 90px;
+		@include desktop{
+			display: none;
+		}
+	}
+}

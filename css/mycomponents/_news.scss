@@ -1,0 +1,13 @@
+section#news{
+	height: auto;
+	background: #121212;
+	@include background(url("http://www.transparenttextures.com/patterns/noise-pattern-with-subtle-cross-lines.png"), repeat);
+	padding: 100px 0 300px 0;
+	ul.press-releases{
+		margin-top: 50px;
+		font-size: 16px;
+		li{
+			list-style-type: none;
+		}
+	}
+}

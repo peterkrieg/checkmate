@@ -1,0 +1,166 @@
+// ------------------------NAVBAR-----------------------------
+
+nav.navbar-fixed-top{
+	opacity: 0;
+	position: fixed;
+	top: -50px;
+	@include transition(.5s ease);
+}
+
+nav.top-nav-appear{
+	opacity: .92;
+	position: fixed;
+	top: 0px;
+	@include transition(1s ease);
+}
+
+
+
+
+
+
+// NAVBAR
+nav.navbar{
+	font-family: $montserrat;
+	text-transform: uppercase;
+	background: $dark;
+	border-bottom: 1px solid $grey;
+	@include tablet{
+		height: 60px;
+	}
+	img.logo{
+		height: 30px;
+		@include tablet{
+			height: 35px;
+		}
+		@include desktop{
+			height: 40px;
+		}
+		margin-top: -7px;
+		@include transition(.5s ease);
+		&:hover{
+			// opacity: .7;
+			@include transform(scale(1.03));
+			@include transition(.4s ease);
+		}
+	}
+	div.navbar-header{
+		button.navbar-toggle{
+			background: $dark;
+			border: 1px solid $grey;
+			&:hover span.icon-bar{
+				background: $gold;
+				@include transition(.5s ease);
+			}
+		}
+		span.icon-bar{
+			@include transition(.3s ease);
+			background: $light;
+		}
+	}
+	div#navbar{
+		// Only floats navbar if tablet or bigger, so the mobile menu isn't messed up
+		@include tablet{
+			float: right;
+		}
+		ul.nav{
+			li{
+				&.active{
+					a{
+						color: $gold;
+						background: $dark;
+						// @include transition(.8s ease);
+						// @include transition(.6s border-bottom ease); 
+						border-bottom: 3px solid $gold;
+						@include phoneOnly{
+							// padding-left: 25px;
+							@include transition(1s padding-left ease);
+							border-bottom: none;
+							text-decoration: underline;
+						}
+					}
+				}
+				a{
+					color: $grey;
+					@include tablet{
+						font-size: 16px;
+						height: 60px;
+						padding-top: 20px;
+					}
+					@include desktop{
+						font-size: 19px;
+					}
+					@include transition(color .3s ease);
+					&:hover{
+						color: $gold;
+						background: none;
+						@include transition(.6s ease);
+					}
+					&:focus{
+						background: none;
+					}
+				}
+			}
+
+
+			// This little 8x100 px block is a hack to show gold border, maybe a cleaner way to do it..
+		
+			
+			li.teamDropDownItem{
+				&.active li a{
+					border: none;
+					color: $grey;
+				}
+			}
+
+
+			div.blockGoldBorder{
+				display: none;
+				background: $dark;
+				position: absolute;
+				width: 100px;
+				height: 8px;
+				left: -5px;
+				top: 54px;
+				z-index: 100;
+			}
+
+			ul.teamDropDownMenu{
+				z-index: 100;
+				display: none;
+				position: absolute;
+				top: 59px;
+				left: -5px;
+				@include phone{
+				}
+				width: 100px;
+				background: $dark;
+				padding: 0;
+				border: 1px solid $grey;
+				border-top: none;
+				li{
+					background: $dark;
+					list-style-type: none;
+					&:not(:last-child){
+						border-bottom: 1px solid $grey;
+					}
+					margin: 0;
+					padding: 10px 10px 10px 5px;
+					a{
+						font-size: 12px;
+						background: none;
+						&:hover{
+							text-decoration: none;
+							color: $gold;
+						}
+						&:focus{
+							text-decoration: none;
+							color: $grey;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
