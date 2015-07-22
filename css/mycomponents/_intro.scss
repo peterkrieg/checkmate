@@ -17,29 +17,6 @@ section#intro {
 		// display: table-cell;
 		// vertical-align: middle;
 	}
-	h1{
-		display: inline;
-		margin: auto;
-		text-align: left;
-		// margin and padding cancel each other out for vertical positioning. 
-		// padding ensures background image has enough room before getting cut off
-		margin-top: -80px;
-		padding-top: 80px;
-		color: $gold;
-		html.index2 &{
-			color: white;
-		}
-		// Separate image for crown, to put over text
-		background: url(../img/crowngold.jpg) no-repeat;
-		
-
-
-		// mobile first size of smallphone
-		// I include 4 different media queries for different devices, adjusting height of 
-		// h1 element and the position/size of background image.  I make width of h1 
-		// just barely wide enough to contain the text at given font-size, so margin: auto 
-		// actually centers the element.  Not the best way to accomplish this probably. 
-	}
 
 	img.checkmateheader{
 			width: 270px;
@@ -58,30 +35,6 @@ section#intro {
 			}
 		}
 
-
-
-
-
-	h2{
-		font-size: 20px;
-		margin-top: -10px;
-		color: $gold;
-		html.index2 &{
-			color: white;
-		}
-		@include phone{
-			font-size: 30px;
-		}
-		@include tablet{
-			font-size: 40px;
-		}
-		@include desktop{
-			font-size: 55px;
-		}
-		@include largedesktop{
-			font-size: 65px;
-		}
-	}
 	.intro-text{
 		font-size: 18px;
 		@include tablet{
