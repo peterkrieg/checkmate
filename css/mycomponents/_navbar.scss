@@ -120,7 +120,11 @@ nav.navbar{
 				position: absolute;
 				width: 100px;
 				height: 8px;
-				left: -5px;
+				// bad hack to make it way off screen (basicall disappear for smaller than tablet)
+				left: 500px;
+				@include tablet{
+					left: -5px;
+				}
 				top: 54px;
 				z-index: 100;
 			}
@@ -129,9 +133,11 @@ nav.navbar{
 				z-index: 100;
 				display: none;
 				position: absolute;
-				top: 59px;
-				left: -5px;
-				@include phone{
+				top: -40px;
+				left: 80px;
+				@include tablet{
+					left: -5px;
+					top: 59px;
 				}
 				width: 100px;
 				background: $dark;
