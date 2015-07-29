@@ -14,11 +14,6 @@ nav.top-nav-appear{
 	@include transition(1s ease);
 }
 
-
-
-
-
-
 // NAVBAR
 nav.navbar{
 	font-family: $montserrat;
@@ -39,7 +34,6 @@ nav.navbar{
 		margin-top: -7px;
 		@include transition(.5s ease);
 		&:hover{
-			// opacity: .7;
 			@include transform(scale(1.03));
 			@include transition(.4s ease);
 		}
