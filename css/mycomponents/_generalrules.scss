@@ -26,6 +26,12 @@ h6 {
 	letter-spacing: 1px;
 }
 
+// Resets default behavior of ul, maybe I should do reset.css instead of normalize.css..
+ul{
+	margin: 0;
+	padding: 0;
+}
+
 // Created custom container to simulate bootstrap container-fluid, 
 // without nesting problems
 .my-container{
