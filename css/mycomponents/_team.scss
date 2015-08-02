@@ -36,6 +36,13 @@ section#team{
 		color: $gold;
 		text-transform: uppercase;
 	}
+	div.panel.directors h3{
+		// Small condition for text going onto 2 lines with small screens
+		margin-top: -1px;
+		@include phone{
+			margin-top: 10px;
+		}
+	}
 
 	h5{
 		margin-top: -20px;
