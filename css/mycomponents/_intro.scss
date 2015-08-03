@@ -34,15 +34,15 @@ section#intro {
 			width: 900px;
 		}
 	}
-	// // lots of media queries to change position of checkmate header based on landscape mode of phone
-	// @media only screen 
-	// and (min-device-width: 320px) 
-	// and (max-device-width: 568px)
-	// and (orientation: landscape) {
-	// 	img.checkmateheader{
-	// 		margin-top: -400px;
-	// 	}
-	// }
+	// lots of media queries to change position of checkmate header based on landscape mode of phone
+	@media only screen 
+	and (min-device-width: 320px) 
+	and (max-device-width: 568px)
+	and (orientation: landscape) {
+		img.checkmateheader{
+			margin-top: -100px;
+		}
+	}
 
 	.intro-text{
 		font-size: 18px;
