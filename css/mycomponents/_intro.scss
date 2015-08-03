@@ -44,6 +44,22 @@ section#intro {
 		}
 	}
 
+	@media only screen 
+	and (min-device-width: 569px) 
+	and (max-device-width: 900px)
+	and (orientation: landscape) {
+		img.checkmateheader{
+			margin-top: -150px;
+		}
+	}
+
+	// One media query, soething that isn't great code but necessary for iphone 6
+	@media screen and (min-width: 410px) and (max-width: 560px) {
+		img.checkmateheader{
+			width: 330px;
+		}
+	}
+
 	.intro-text{
 		font-size: 18px;
 		@include tablet{
