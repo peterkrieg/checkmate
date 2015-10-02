@@ -99,7 +99,7 @@ section#intro {
 		i{
 			@include transition(.3s ease);
 		}
-		&:hover {
+		.no-touchevents &:hover {
 			border-color: $gold;
 			@include transition(.3s ease);
 			i{

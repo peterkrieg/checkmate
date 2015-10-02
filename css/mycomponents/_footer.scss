@@ -7,7 +7,7 @@ footer{
 			@include transition(.5s ease);
 			color: $grey;
 			text-decoration: underline;
-			&:hover{
+			.no-touchevents &:hover{
 				text-decoration: none;
 				color: $gold;
 				@include transition(.8s ease);

@@ -46,7 +46,12 @@ section{
 	a{
 		text-decoration: underline;
 		color: $light;
-		&:hover{
+		// uses modernizr to only apply hover styles to non-touch screens.  not perfect solution at all
+		//   explains more:  http://www.stucox.com/blog/you-cant-detect-a-touchscreen/
+		// actually big issue was that on iOS devices, all links that have hover, need to be double clicked, very annoying
+		// Not sure why this wasn't happening before.. upon creation of site.  Possibly updates of iOS 
+		// This was updated 8/1/15, upon realizing bug of site a few days earlier
+		.no-touchevents &:hover{
 			color: $gold;
 		}
 	}
@@ -77,7 +82,7 @@ a.pluslinkperson{
 		color: $gold;
 		@include transition(.3s ease);
 		text-decoration: none;
-		&:hover{
+		.no-touchevents &:hover{
 			@include transform(scale(1.05));
 		}
 		&.reveal{

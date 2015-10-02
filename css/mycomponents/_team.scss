@@ -18,7 +18,7 @@ section#team{
 		background-color: rgb(18, 18, 18);
 		background-color: rgba(18, 18, 18, .8);
 		@include transition(.2s ease);
-		&:hover{
+		.no-touchevents &:hover{
 			cursor: pointer;
 			background-color: rgba(18, 18, 18, .7);
 			@include transform(scale(1.02));
