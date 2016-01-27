@@ -83,7 +83,7 @@ a.pluslinkperson{
 		@include transition(.3s ease);
 		text-decoration: none;
 		.no-touchevents &:hover{
-			@include transform(scale(1.05));
+			// @include transform(scale(1.05));
 		}
 		&.reveal{
 			@include transform(rotate(45deg));
