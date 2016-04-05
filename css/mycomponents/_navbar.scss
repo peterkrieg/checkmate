@@ -129,11 +129,11 @@ nav.navbar{
 				position: absolute;
 				top: -40px;
 				left: 80px;
-				@include tablet{
+				@include tablet {
 					left: -5px;
 					top: 59px;
 				}
-				width: 100px;
+				width: 160px;
 				background: $dark;
 				padding: 0;
 				border: 1px solid $grey;
