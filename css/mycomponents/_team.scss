@@ -68,10 +68,33 @@ section#team{
 		margin-top: -20px;
 		text-align: left;
 		line-height: 22px;
-		display: none;
+		@include tabletOrLess {
+			display: none;
+		}
 		@include desktopOrMore {
 			margin-top: 10px;
 			display: block;
+		}
+	}
+	// targeting people without pictures, board of oncology (shorter info)
+	.no-picture {
+		h6.person-title {
+			text-align: left;
+			font-size: 18px;
+			margin-bottom: 10px;
+			@include desktopOrMore {
+				display: block;
+			}
+			@include tabletOrLess {
+				margin-bottom: 30px;
+			}
+		}
+		p.bio{
+			padding-left: 20px;
+			@include tabletOrLess {
+				padding-left: 10px;
+				display: block;
+			}
 		}
 	}
 	a.pluslinkperson{
