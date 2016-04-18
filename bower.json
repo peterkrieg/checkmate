@@ -1,0 +1,22 @@
+{
+  "name": "checkmate",
+  "description": "Checkmate Pharmaceuticals =====================",
+  "main": "index.js",
+  "authors": [
+    "Peter Krieg <pkrieg2@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/peterkrieg/checkmate",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6",
+    "jquery": "~2.2.3"
+  }
+}
