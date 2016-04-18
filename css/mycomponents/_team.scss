@@ -41,7 +41,7 @@ section#team{
 	div.panel.directors h3{
 		// Small condition for text going onto 2 lines with small screens
 		margin-top: -1px;
-		@include phone{
+		@include phoneOrMore {
 			margin-top: 10px;
 		}
 	}
@@ -53,7 +53,7 @@ section#team{
 		width: 70%;
 	}
 	h6{
-		@include desktop{
+		@include desktopOrMore {
 			display: none;
 		}
 	}
@@ -62,14 +62,14 @@ section#team{
 	}
 	p.bio{
 		font-size: 15px;
-		@include tablet{
+		@include tabletOrMore {
 			font-size: 16px;
 		}
 		margin-top: -20px;
 		text-align: left;
 		line-height: 22px;
 		display: none;
-		@include desktop{
+		@include desktopOrMore {
 			margin-top: 10px;
 			display: block;
 		}
@@ -77,7 +77,7 @@ section#team{
 	a.pluslinkperson{
 		margin-top: -70px;
 		font-size: 90px;
-		@include desktop{
+		@include desktopOrMore {
 			display: none;
 		}
 	}

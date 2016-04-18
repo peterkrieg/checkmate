@@ -58,7 +58,7 @@ section{
 	h2{
 		color: $gold;
 		font-size: 30px;
-		@include tablet{
+		@include tabletOrMore {
 			font-size: 43px;
 		}
 	}

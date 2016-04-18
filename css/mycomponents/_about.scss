@@ -22,7 +22,7 @@ section#about{
 	}
 	h2{
 		font-size: 30px;
-		@include tablet{
+		@include tabletOrMore {
 			font-size: 43px;
 		}
 	}
@@ -48,10 +48,10 @@ section#about{
 	div.moreabout{
 		img{
 			width: 100%;
-			@include phone{
+			@include phoneOrMore {
 				width: 80%;
 			}
-			@include desktop{
+			@include desktopOrMore {
 				width: 100%;
 			}
 		}

@@ -22,16 +22,16 @@ section#intro {
 		margin-top: -30px;
 		padding-bottom: 10px;
 		width: 270px;
-		@include phone{
+		@include phoneOrMore {
 			width: 450px;
 		}
-		@include tablet{
+		@include tabletOrMore {
 			width: 600px;
 		}
-		@include desktop{
+		@include desktopOrMore {
 			width: 750px;
 		}
-		@include largedesktop{
+		@include largedesktop {
 			width: 900px;
 		}
 	}
@@ -63,20 +63,20 @@ section#intro {
 
 	.intro-text{
 		font-size: 18px;
-		@include tablet{
+		@include tabletOrMore {
 			font-size: 22px;
 		}
-		@include desktop{
+		@include desktopOrMore {
 			font-size: 25px;
 		}
 	}
 	.learn-more{
 		margin-top: 30px;
 		font-size: 14px;
-		@include tablet{
+		@include tabletOrMore {
 			font-size: 17px;
 		}
-		@include desktop{
+		@include desktopOrMore {
 			font-size: 19px;
 		}
 	}
@@ -89,7 +89,7 @@ section#intro {
 		font-size: 30px;
 		color: $light;
 		background: transparent;
-		@include tablet{
+		@include tabletOrMore {
 			height: 70px;
 			width: 70px;
 			font-size: 40px;

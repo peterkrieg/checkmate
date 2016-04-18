@@ -20,15 +20,15 @@ nav.navbar{
 	text-transform: uppercase;
 	background: $dark;
 	border-bottom: 1px solid $grey;
-	@include tablet{
+	@include tabletOrMore {
 		height: 60px;
 	}
 	img.logo{
 		height: 30px;
-		@include tablet{
+		@include tabletOrMore {
 			height: 35px;
 		}
-		@include desktop{
+		@include desktopOrMore {
 			height: 40px;
 		}
 		margin-top: -7px;
@@ -54,7 +54,7 @@ nav.navbar{
 	}
 	div#navbar{
 		// Only floats navbar if tablet or bigger, so the mobile menu isn't messed up
-		@include tablet{
+		@include tabletOrMore {
 			float: right;
 		}
 		ul.nav{
@@ -66,7 +66,7 @@ nav.navbar{
 						// @include transition(.8s ease);
 						// @include transition(.6s border-bottom ease); 
 						border-bottom: 3px solid $gold;
-						@include phoneOnly{
+						@include phone {
 							// padding-left: 25px;
 							@include transition(1s padding-left ease);
 							border-bottom: none;
@@ -76,12 +76,12 @@ nav.navbar{
 				}
 				a{
 					color: $grey;
-					@include tablet{
+					@include tabletOrMore {
 						font-size: 16px;
 						height: 60px;
 						padding-top: 20px;
 					}
-					@include desktop{
+					@include desktopOrMore {
 						font-size: 19px;
 					}
 					@include transition(color .3s ease);
@@ -116,7 +116,7 @@ nav.navbar{
 				height: 8px;
 				// bad hack to make it way off screen (basicall disappear for smaller than tablet)
 				left: 500px;
-				@include tablet{
+				@include tabletOrMore {
 					left: -5px;
 				}
 				top: 54px;
@@ -129,7 +129,7 @@ nav.navbar{
 				position: absolute;
 				top: -40px;
 				left: 80px;
-				@include tablet {
+				@include tabletOrMore {
 					left: -5px;
 					top: 59px;
 				}
