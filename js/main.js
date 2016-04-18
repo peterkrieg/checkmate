@@ -37,32 +37,37 @@ $(function(){
 
 	// Hides the extra science content, until user clicks plus
 	$('.moreabout').hide();
+	$('.moreabout2').hide();
+
 
 	// Expand more info on about page
 	$('a.pluslink').click(function(event){
- 		event.preventDefault();
- 		if($(this).hasClass('reveal')){
- 			$(this).removeClass('reveal');
- 			$('.moreabout').slideToggle(200);
- 		}
- 		else{
- 			$(this).addClass('reveal');
- 			$('.moreabout').slideToggle(800);
- 		}
- 	});
+		event.preventDefault();
+		var target = $(this).attr('data-target');
+		console.log(target);
+		var $target = $('.'+target);
+		if($(this).hasClass('reveal')){
+			$(this).removeClass('reveal');
+			$target.slideToggle(200);
+		}
+		else{
+			$(this).addClass('reveal');
+			$target.slideToggle(800);
+		}
+	});
 
 	// Expand bio for each person
- 	$('a.pluslinkperson').click(function(event){
- 		event.preventDefault();
- 		if($(this).hasClass('reveal')){
- 			$(this).removeClass('reveal');
- 			$(this).next().slideToggle(200);
- 		}
- 		else{
- 			$(this).addClass('reveal');
- 			$(this).next().slideToggle(800);
- 		}
- 	});
+	$('a.pluslinkperson').click(function(event){
+		event.preventDefault();
+		if($(this).hasClass('reveal')){
+			$(this).removeClass('reveal');
+			$(this).next().slideToggle(200);
+		}
+		else{
+			$(this).addClass('reveal');
+			$(this).next().slideToggle(800);
+		}
+	});
 
  	// Minor problem--when bio is hidden on mobile screen, when window resized->bigger, still hidden
  	$(window).resize(function(){
@@ -71,8 +76,8 @@ $(function(){
  			// Css in external file takes care of everything, so inline doesn't override it
  			$('p.bio').css('display', '');
  		}
-		
-	})
+
+ 	})
 
  	// Reveal Team drop down menu when mouseover
  	$('li.teamDropDownItem').on('mouseenter', function(){
@@ -100,8 +105,8 @@ $(function(){
  		$accordion.removeClass('hidden').addClass('reveal').hide().fadeIn(500);
  		// Scroll page to location of accordion
  		$('html, body').stop().animate({
-				scrollTop: $($accordion).offset().top-190
-			}, 0, 'easeInOutExpo');
+ 			scrollTop: $($accordion).offset().top-190
+ 		}, 0, 'easeInOutExpo');
  	};
 
  	// Event when one of 3 panels is clicked 
@@ -125,7 +130,7 @@ $(function(){
 
 
 
-});
+ });
 
 
 
