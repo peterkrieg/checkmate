@@ -55,8 +55,12 @@ section#about{
 				width: 100%;
 			}
 		}
+		h4.science3{
+			text-align: center;
+		}
 		img.science3{
 			max-width: 680px;
+			width: 100%;
 		}
 		p{
 			font-size: 15px;
@@ -65,5 +69,68 @@ section#about{
 			padding-top: 30px;
 		}
 	}
+
+
+	div.glossary{
+		margin-top: 20px;
+		h4{
+			color: $grey;
+			margin-bottom: 10px;
+		}
+		ul{
+			font-size: 15px;
+			@include desktopOrMore {
+				width: 80%;
+			}
+			margin: auto;
+		}
+		strong{
+			// font-size: 18px;
+			color: $gold;
+		}
+		li{
+			list-style-type: none;
+			text-align: left;
+			&:not(:last-of-type){
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	div.learnmore2{
+		margin-top: 60px;
+	}
+
+
+
+	div.three-columns-text{
+		margin-bottom: 10px;
+	}
+
+
+	div.panel2{
+		// total hack to make it look OK, not have the "1" wrap onto 3rd line
+		h3{
+			@include largedesktop {
+				width: 580px;
+				position: relative;
+				right: 15px;
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 } 
