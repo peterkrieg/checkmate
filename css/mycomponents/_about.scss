@@ -119,6 +119,33 @@ section#about{
 		}
 	}
 
+	//____________________3rd about panel (review articles/footnotes)_____________________
+	div.moreabout3{
+		h4.review-articles-title{
+			color: $grey;
+			margin-bottom: 15px;
+			&.title-two{
+				margin-top: 40px;
+			}
+		}
+		ol.review-articles-list{
+			text-align: left;
+			li{
+				padding-left: 20px;
+				font-size: 12px;
+				@include phoneOrLess {
+					font-size: 10px;
+				}
+			}
+
+		}
+
+
+
+
+
+	}
+
 
 
 

@@ -38,6 +38,7 @@ $(function(){
 	// Hides the extra science content, until user clicks plus
 	$('.moreabout').hide();
 	$('.moreabout2').hide();
+	$('.moreabout3').hide();
 
 
 	// Expand more info on about page
