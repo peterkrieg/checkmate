@@ -15,7 +15,9 @@
 @import "mycomponents/contact";
 @import "mycomponents/footer";
 
+// total hack to make this work, somehow bootstrap container got messed up somewhere
+// horizontal scrollbar present on whole page
 .row{
 	margin-right: 0px;
-	margin-left: 0px;
+	margin-left: 0px;	
 }
