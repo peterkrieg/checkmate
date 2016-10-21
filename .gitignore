@@ -10,3 +10,4 @@ node_modules/
 *.psd
 scripts/
 bower_components
+*.env
